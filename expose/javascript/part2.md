@@ -20,9 +20,42 @@
 
 11. this function will return an array that contains: [50, 100, 150]. This is because although discountPrice is being updated and it's a const, because it is being redeclared every iteration no error occurs and it can be pushed to discounted as normally.
 
-12. Ignore the ' '
-    - A. 'student.name'
+12. - A. 'student.name'
     - B. 'student["Grad Year"]'
     - C. 'student.greeting();'
     - D. 'student["Favorite Teacher"].name'
     - E. 'student.courseLoad[0]'
+
+- - -
+
+13. 
+    - A. '32' - this is because intergers map to their exact string representation
+    - B. 1 - there is no equivalent string operator for -, so it gets converted to integer subtraction
+    - C. 3 - this is because null is converted to 0, so 3 + 0 = 3
+    - D. '3null' - this is because 3 is a string and it is getting concatenated with the exact string representation of null
+    - E. 4 = this is because true gets converted to 1 so 3 + 1 = 4
+    - F. 0 - this is because false gets converted to 0, and null is 0, so 0 + 0 = 0
+    - G. '3undefined' - this is because '3' is a string so then undefined is converted to a string
+    - H. NaN - undefined is not a valid number so it returns NaN
+
+- - -
+
+14. 
+    - A. true - the '2' becomes an int so 2 is greater than 1
+    - B. false - these are strings, so since '2' as a character comes after '1', '2' is greater
+    - C. true - because '2' becomes an integer, so 2 == 2
+    - D. false - because === checks equality without type conversion so int != string
+    - E. false - because true == 1, so 1 != 2
+    - F. true - because Boolean(2) will just make a boolean object that is true so true = true
+
+- - -
+
+15. == is a regular equality check but cannot differentiate between types since it converts them. === is a strict equality operator that checks for equality without type conversion
+
+16. *look at js file*
+
+17. modifyArray will return an array that contains: [2,4,6]. Once modifyArray is called, it initalizes a newArr = [] that is constant. Then it enters the loop that will loop through the length of the input array (in this case it will be 3 iterations). On line 4, inside the push function, a callback is used. The function 'doSomething' was the callback and it is given the argument 'array[i]', so on the first loop it will be given the value 1. Then doSomething will double it, and return. Thus newArr will be pushed the value 2 into its array. This will continue for all values in the input array with the result of 2,4,6.
+
+18. *look at js file*
+
+19. It will output: 1 4 3 2. 1 is outputted first because it's called first, then 4 because its called second (no delay). Then 3 because the delay is 0 (next call cycle), then a second later 2 is printed.
